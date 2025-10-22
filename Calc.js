@@ -27,12 +27,20 @@ class Calc {
             throw new Error('unsupported operand type');
         }
         
+        if (b === 0) {
+            throw new Error('division by zero');
+        }
+        
         return Math.trunc(a / b);
     }
     
     static divFloat(a, b) {
         if (typeof a !== 'number' || typeof b !== 'number') {
             throw new Error('unsupported operand type');
+        }
+
+        if (b === 0) {
+            throw new Error('division by zero');
         }
         
         return a / b;
