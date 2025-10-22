@@ -11,8 +11,18 @@ describe('Test Calc', () => {
     });
     
     it('Test Sub', () => {
-        assert.strictEqual(Calc.add(3, 2), 1);
-        assert.throws(() => {Calc.add(2, '3')}, {name: 'Error', message: 'unsupported operand type'});
+        assert.strictEqual(Calc.sub(3, 2), 1);
+        assert.throws(() => {Calc.sub(2, '3')}, {name: 'Error', message: 'unsupported operand type'});
     })
     
+    it('Test Mul', () => {
+        assert.strictEqual(Calc.mul(2, 3), 6);
+        assert.throws(() => {Calc.mul(2, '3')}, {name: 'Error', message: 'unsupported operand type'});
+    })
+    
+    it('Test Div', () => {
+        assert.strictEqual(Calc.div(6, 3), 2);
+        assert.throws(() => {Calc.div(2, 0)}, {name: 'Error', message: 'division by zero'});
+        assert.throws(() => {Calc.div(2, '3')}, {name: 'Error', message: 'unsupported operand type'});
+    })
 });
