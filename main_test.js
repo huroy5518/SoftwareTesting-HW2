@@ -22,15 +22,15 @@ describe('Test Calc', () => {
     
     it('Test DivInt', () => {
         // Integer division
-        assert.strictEqual(Calc.div(7, 2), 3);
-        assert.throws(() => {Calc.div(2, 0)}, {name: 'Error', message: 'division by zero'});
-        assert.throws(() => {Calc.div(2, '3')}, {name: 'Error', message: 'unsupported operand type'});
+        assert.strictEqual(Calc.divInt(7, 2), 3);
+        assert.throws(() => {Calc.divInt(2, 0)}, {name: 'Error', message: 'division by zero'});
+        assert.throws(() => {Calc.divInt(2, '3')}, {name: 'Error', message: 'unsupported operand type'});
     })
     
     it('Test DivFloat', () => {
         // Float division
-        assert.strictEqual(Calc.div(7, 2), 3.5);
-        assert.throws(() => {Calc.div(2, 0)}, {name: 'Error', message: 'division by zero'});
-        assert.throws(() => {Calc.div(2, '3')}, {name: 'Error', message: 'unsupported operand type'});
+        assert.strictEqual(Calc.divFloat(7, 2), 3.5);
+        assert.throws(() => {Calc.divFloat(2, 0)}, {name: 'Error', message: 'division by zero'});
+        assert.throws(() => {Calc.divFloat(2, '3')}, {name: 'Error', message: 'unsupported operand type'});
     })
 });
